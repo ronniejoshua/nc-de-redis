@@ -1,0 +1,13 @@
+# https://www.youtube.com/watch?v=nG8ex99AbTw
+
+
+services:
+  redis:
+    container_name: 'nc-de-redis'
+    restart: always
+    image: redis
+    command: redis-server --requirepass Ronnie123!@#
+    volumes:
+      - ./redis-data:/var/lib/redis
+    ports:
+      - '6379:6379'
